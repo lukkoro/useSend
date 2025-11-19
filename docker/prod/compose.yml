@@ -44,7 +44,7 @@ services:
     command: -c 'mkdir -p /data/unsend && minio server /data --console-address ":9001" --address ":9002"'
 
   usesend:
-    image: usesend/usesend:latest
+    dockerfile: docker/Dockerfile
     container_name: usesend
     restart: always
     ports:
